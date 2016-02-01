@@ -7,12 +7,16 @@ var cat_img = document.getElementById('cat_img');
 var feed_me = document.getElementById('myButton');
 
 
+var exercise_me = document.getElementById('myExercise');
+
+
 // event listener
 
 cat_img.addEventListener("click", meow);
 
 feed_me.addEventListener("click", yummy);
 
+exercise_me.addEventListener("click", exercise);
 
 
 function meow() {
@@ -21,7 +25,12 @@ function meow() {
 
 
 function yummy() {
-	alert("Yummy");
+	cat_img.style.width = (cat_img.offsetWidth + 30.0) + 'px';
+}
+
+
+function exercise() {
+	cat_img.style.width = (cat_img.offsetWidth - 30.0) + 'px';
 }
 
 // manipulate html element
