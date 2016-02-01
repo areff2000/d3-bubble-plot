@@ -1,3 +1,18 @@
+var my_dog = {
+    name: 'fido',
+    weight:'100',
+    previous_weights: [80, 90, 95, 100, 110],
+    
+    }
+    
+    console.log (my_dog);
+
+
+
+
+
+
+
 //interact
 
 // get html
