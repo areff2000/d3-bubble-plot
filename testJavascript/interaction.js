@@ -1,3 +1,20 @@
+var old_array   = [1,2,3];
+    var new_array = old_array.map(function(old_array_element){
+        return old_array_element;
+        }); 
+
+console.log(old_array);
+console.log(new_array);
+        
+// How to filter into a new array:
+    var filtered_array = old_array.filter(function(old_array_element){
+        return old_array_element > 1;
+        }); 
+// so the filtered array would contain [2, 3]
+
+
+
+/*
 var my_dog = {
     name: 'fido',
     weight:'100',
@@ -51,4 +68,4 @@ function exercise() {
 // manipulate html element
 
 
-
+*/
