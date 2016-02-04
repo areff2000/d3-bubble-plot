@@ -31,11 +31,29 @@ canvas.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 var xScale = d3.scale.log();
 xScale.domain([250, 1e5]);
 xScale.range([0, canvas_width]);
-var xAxis_generator_function = d3.svg.axis().orient("bottom").scale(xScale);
+//var xAxis_generator_function = d3.svg.axis().orient("bottom").scale(xScale);
+var xAxis_generator_function = d3.svg.axis().orient("bottom").scale(xScale).ticks(12, d3.format(",d"));
 
 canvas.append("g").call(xAxis_generator_function)
                 .attr("transform", "translate(0," + canvas_height + ")")
                 .attr("class","x axis");
+                
+// Add an x-axis label.
+                canvas.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", canvas_width)
+    .attr("y", canvas_height - 6)
+    .text("income per capita, inflation-adjusted (dollars)");
+
+// Add a y-axis label.
+	canvas.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("life expectancy (years)");
 
 var yScale = d3.scale.linear();
 yScale.domain([0, 85]);
