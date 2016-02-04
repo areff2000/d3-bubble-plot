@@ -8,7 +8,6 @@ var filtered_nations = nations.map(function(nation_element){
 });
 var year_idx = parseInt(document.getElementById("year_slider").value)-1950;
 
-
 var chart_area = d3.select('#chart_area');
 
 var frame = chart_area.append("svg");
@@ -125,7 +124,7 @@ function update(){
 
         magicald3linkingthing.enter().append("circle").attr("class","dot")
              
-                .style("fill", function(d){ return mycolors(d.region[0])})
+                .style("fill", function(d){ return mycolors(d.region)})
                 .on("mouseover", function(d){return tooltip.style("visibility", "visible").text(d.name);})
 				.on("mousemove", function(){return tooltip.style("top", (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
 				.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
