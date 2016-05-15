@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+<h1>Plot.ly FTTN (blue) vs FTTP (red). </h1>
+Datapoints: GDP impact $k (FTTN - FTTP) at Yr 20, discounted to current $$; 
+
+
+
+<table><th>No FTTN CAPEX REPLACEMENT</th><tr><td>
+<div id="myDiv" style="width:600px;height:250px;"></div>
+<div id="myDiv2" style="width:600px;height:250px;"></div>
+<div id="myDiv3" style="width:600px;height:250px;"></div>
+</td></tr></table>
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+  z: [[-12, -9,-6,-3,0],
+      [-10,-7,-4,-1,2],
+       [-9,-6, -3,0, 2],
+       [-7,-3.5,-1,1.5,3]],
+       
+  x: [0,2,4,6,8],
+  y: [0,3,5,10],
+  type: 'contour',
+  zmin: -22,
+    zmax: 22,
+    reversescale: true  
+  
+}];
+
+var layout = {
+  title: '0% pa boost to Household GDP',
+  xaxis: {                  // all "layout.xaxis" attributes: #layout-xaxis
+        title: 'FTTP years delay to construct'         // more about "layout.xaxis.title": #layout-xaxis-title
+    },
+  yaxis: {
+        title: 'Discount rate %'
+        }      
+  
+};
+
+Plotly.newPlot('myDiv', data, layout);
+
+
+</script>
+
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+  z: [[-12, -6.5,2,5,11],
+      [-10,-4,1,6.6,11.5],
+       [-9,-3, 2,7, 11],
+       [-7,-1,4,7.5,11]],
+       
+  x: [0,2,4,6,8],
+  y: [0,3,5,10],
+  type: 'contour',
+  zmin: -22,
+   zmax: 22,
+    reversescale: true  
+  
+}];
+
+var layout = {
+  title: '1% pa boost to Household GDP'
+};
+
+Plotly.newPlot('myDiv2', data, layout);
+
+
+</script>
+
+
+<script>
+	TESTER = document.getElementById('tester');
+	
+	var data = [{
+  z: [[-12,-4, 5,14,22.5],
+      [-10,-1.5,6.5,14,21],
+       [-9, 0,7,14, 20.5],
+       [-7,1,8,14,18]],
+       
+  x: [0,2,4,6,8],
+  y: [0,3,5,10],
+  type: 'contour',
+  zmin: -22,
+ zmax: 22,
+    reversescale: true  
+  
+}];
+
+var layout = {
+  title: '2% pa boost to Household GDP'
+};
+
+Plotly.newPlot('myDiv3', data, layout);
+
+
+</script>
+
+
+
+</body>
+</html>
