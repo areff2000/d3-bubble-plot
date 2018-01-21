@@ -1,7 +1,8 @@
 # d3-bubble-plot
 Resbaz 2016
 
-These files are the test output of d3 Training at University of Melbourne - Research Bazaar 2016.<br>
+These files are the test output of D3 (javascript data visualisation) Training at University of Melbourne - Research Bazaar 2016.<br>
+D3: https://d3js.org <br>
 Event 2016: http://melbourne.resbaz.edu.au/ResBaz2016
 
 D3 Training Material: 
