@@ -80,4 +80,11 @@ background-color: pink;
   fill: white;
   stroke-width: 5;
 }
+
+.moon {
+
+  stroke: grey;
+  fill: grey;
+  stroke-width: 5;
+}
 <circle class="circ2" cx="200" cy="100" r="10"></circle>
